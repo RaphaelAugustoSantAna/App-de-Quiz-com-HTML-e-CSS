@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <input type="radio" name="res" id="resOk" value="resOk">
-    <input type="radio" name="res" id="resFalse" value="resFalse">
+    <input type="radio" name="res" id="resOk" value="resOk" />
+    <input type="radio" name="res" id="resFalse" value="resFalse" />
 
-    <input type="radio" name="res2" id="res2ok" value="res2ok">
-    <input type="radio" name="res2" id="res2False" value="res2False">
+    <input type="radio" name="res2" id="res2ok" value="res2ok" />
+    <input type="radio" name="res2" id="res2False" value="res2False" />
 
-    <input type="radio" name="res3" id="res3ok" value="res3ok">
-    <input type="radio" name="res3" id="res3False" value="res3False">
+    <input type="radio" name="res3" id="res3ok" value="res3ok" />
+    <input type="radio" name="res3" id="res3False" value="res3False" />
 
     <main>
       <header>
@@ -24,7 +24,23 @@
       </header>
 
       <section id="answers">
-        <div id="ansLen" class="ans"></div>
+        <div id="ansRes" class="res">
+          <label for="resOk">teste ok</label>
+          <label for="resFalse">teste false</label>
+        </div>
+
+        <div id="ansRes2" class="res">
+          <label for="res2ok">teste2 ok</label>
+          <label for="res2False">teste2 false</label>
+        </div>
+
+        <div id="ansRes3" class="res">
+          <label for="res3ok">teste3 ok</label>
+          <label for="res3False">teste3 false</label>
+        </div>
+      </section>
+      <section id="congrats">
+        Parabéns!!! você acertou todas!!!
       </section>
     </main>
   </body>
