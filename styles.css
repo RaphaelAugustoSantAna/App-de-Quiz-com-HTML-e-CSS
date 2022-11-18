@@ -1,86 +1,106 @@
-html, body{
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
-body{
-    background-color: rgb(160, 160, 194);
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 1em;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  background-color: rgb(160, 160, 194);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 1em;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
 
-input[type="radio"]{
-    opacity: 0;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    position: absolute;
+input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
 }
 
-#answers{
-    display: flex;
-    flex-direction: column;
-    padding: .5em 2em;
-    background: rgb(135, 135, 165);
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
+#answers {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 2em;
+  background: rgb(135, 135, 165);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#congrats{
-    display: none;
+#congrats {
+  opacity: 0;
 }
 
-.res{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.res {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.res:not(:last-child){
-    border-bottom: 1px solid white;
-
+.res:not(:last-child) {
+  border-bottom: 1px solid white;
 }
 
-label{
-    position: relative;
-    font-size: 1.5em;
+label {
+  position: relative;
+  font-size: 1.5em;
+  flex-grow: 1;
+  margin: 1em 0;
 }
 
-label:first-child::after, label:last-child::after{
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    top: calc(50% - .5em);
-    width: 1em;
-    height: 1em;
-    background-color: blue;
+label:first-child::after,
+label:last-child::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 0.5em);
+  width: 1em;
+  height: 1em;
+  background-color: rgb(228, 228, 245);
 }
 
-label:first-child{
-    padding-left: 2em;
+label:first-child {
+  padding-left: 2em;
+  margin-right: 1em;
 }
 
-label:last-child{
-    padding-right: 2em;
+label:last-child {
+  padding-right: 2em;
+  margin-left: 1em;
 }
 
-label:first-child::after{
-left: 0;
+label:first-child::after {
+  left: 0;
 }
 
-label:last-child::after{
-    right: 0;
-    }
+label:last-child::after {
+  right: 0;
+}
+
+#resOk:checked ~ main [for="resOk"]:first-child::after,
+#resFalse:checked ~ main [for="resFalse"]:last-child::after,
+#res2ok:checked ~ main [for="res2ok"]:first-child::after,
+#res2False:checked ~ main [for="res2False"]:last-child::after,
+#res3ok:checked ~ main [for="res3ok"]:first-child::after,
+#res3False:checked ~ main [for="res3False"]:last-child::after {
+  background-color: rgb(80, 80, 95);
+  box-shadow: 0 0 0 2px rgb(135, 135, 165), 0 0 0 5px rgb(80, 80, 95);
+}
+
+#resOk:checked ~ #res2ok:checked ~ #res3ok:checked ~ main #congrats {
+  transition: .5s opacity;
+  opacity: 1;
+}
