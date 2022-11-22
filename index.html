@@ -8,39 +8,42 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <input type="radio" name="res" id="resOk" value="resOk" />
-    <input type="radio" name="res" id="resFalse" value="resFalse" />
+    <input type="radio" name="python" id="python" value="python" />
+    <input type="radio" name="python" id="swift" value="swift" />
 
-    <input type="radio" name="res2" id="res2ok" value="res2ok" />
-    <input type="radio" name="res2" id="res2False" value="res2False" />
+    <input type="radio" name="cSharp" id="cSharp" value="cSharp" />
+    <input type="radio" name="cSharp" id="php" value="php" />
 
-    <input type="radio" name="res3" id="res3ok" value="res3ok" />
-    <input type="radio" name="res3" id="res3False" value="res3False" />
+    <input type="radio" name="cMaisMais" id="cMaisMais" value="cMaisMais" />
+    <input type="radio" name="cMaisMais" id="javaScript" value="javaScript" />
 
     <main>
       <header>
         <h1>App de Quiz</h1>
-        <h2>Escolha a resposta correta</h2>
+        <!-- fonte da pesquisa -->
+        <!-- https://www.hostinger.com.br/tutoriais/linguagens-de-programacao-mais-usadas#:~:text=Se%20tratando%20de%20desenvolvimento%20web,Java%2C%20JavaScript%20e%20C%2B%2B. -->
+        <h2>Quais são as 3 linguagens de programação mais usadas em 2022?</h2>
       </header>
 
       <section id="answers">
         <div id="ansRes" class="res">
-          <label for="resOk">teste ok</label>
-          <label for="resFalse">teste false</label>
+          <label for="python">Python</label>
+          <label for="swift">Swift</label>
         </div>
 
         <div id="ansRes2" class="res">
-          <label for="res2ok">teste2 ok</label>
-          <label for="res2False">teste2 false</label>
+          <label for="cSharp">C#</label>
+          <label for="php">PHP</label>
         </div>
 
         <div id="ansRes3" class="res">
-          <label for="res3ok">teste3 ok</label>
-          <label for="res3False">teste3 false</label>
+          <label for="cMaisMais">C++</label>
+          <label for="javaScript">JavaScript</label>
         </div>
       </section>
       <section id="congrats">
-        Parabéns!!! você acertou todas!!!
+        <h2>Parabéns!</h2> <br> 
+        <h2>você acertou todas!!!</h2>
       </section>
     </main>
   </body>

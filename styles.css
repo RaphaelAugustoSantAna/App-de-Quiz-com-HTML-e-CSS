@@ -90,17 +90,17 @@ label:last-child::after {
   right: 0;
 }
 
-#resOk:checked ~ main [for="resOk"]:first-child::after,
-#resFalse:checked ~ main [for="resFalse"]:last-child::after,
-#res2ok:checked ~ main [for="res2ok"]:first-child::after,
-#res2False:checked ~ main [for="res2False"]:last-child::after,
-#res3ok:checked ~ main [for="res3ok"]:first-child::after,
-#res3False:checked ~ main [for="res3False"]:last-child::after {
+#python:checked ~ main [for="python"]:first-child::after,
+#swift:checked ~ main [for="swift"]:last-child::after,
+#cSharp:checked ~ main [for="cSharp"]:first-child::after,
+#php:checked ~ main [for="php"]:last-child::after,
+#cMaisMais:checked ~ main [for="cMaisMais"]:first-child::after,
+#javaScript:checked ~ main [for="javaScript"]:last-child::after {
   background-color: rgb(80, 80, 95);
   box-shadow: 0 0 0 2px rgb(135, 135, 165), 0 0 0 5px rgb(80, 80, 95);
 }
 
-#resOk:checked ~ #res2ok:checked ~ #res3ok:checked ~ main #congrats {
+#python:checked ~ #cSharp:checked ~ #cMaisMais:checked ~ main #congrats {
   transition: .5s opacity;
   opacity: 1;
 }
